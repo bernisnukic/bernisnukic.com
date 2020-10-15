@@ -8,8 +8,7 @@ module.exports = {
     standardFontWeights: true
   },
   purge: {
-    purge: {
-      enabled: true,
+    enabled: true,
   },
   theme: {
     extend: {
