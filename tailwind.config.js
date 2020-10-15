@@ -9,6 +9,11 @@ module.exports = {
   },
   purge: {
     enabled: true,
+    content: [
+      './*.html',
+      './components/**/*.js',
+      './pages/**/*.js',
+    ]
   },
   theme: {
     extend: {
