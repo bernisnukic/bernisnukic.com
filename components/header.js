@@ -4,7 +4,6 @@ class HeaderComponent extends Component {
     render() {
         return (
             <div>
-                moj header
             </div>
             )
         }
