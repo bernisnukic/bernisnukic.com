@@ -1,41 +1,42 @@
-import React from "react";
+import React, {useEffect, useRef, useState} from 'react';
 
-import Link from '../components/Link'
+import Header from '../components/header'
 
 
 export default function Home() {
+
+    const [menuOpen, setMenuOpen] = useState(false);
+
+
     return (
         <div className="min-h-screen font-inter flex justify-center bg-white antialiased font-sans">
             <div className="flex w-full flex-col max-w-5xl mx-auto px-6 md:px-8 mt-10">
                 <div className="flex flex-col items-start">
-                    <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-900 font-medium md:font-normal leading-none">Bernis Nukic</div>
-                    <div className="flex w-full">
-                        <div className="mt-10 w-full flex justify-between text-lg mt-10 text-gray-700 border-b border-gray-400">
-                            <div className="inline-flex space-x-4 -mb-px">
-                                <Link href="/" activeClassName="text-gray-600 pb-4 border-b border-gray-900">
-                                    <a>About</a>
-                                </Link>
-                                <Link href="/projects" activeClassName="text-gray-600 pb-4 border-b border-transparent">
-                                    <a>Projects</a>
-                                </Link>
-                            </div>
+                    <div className="flex w-full items-center justify-between">
+                        <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-900 font-medium md:font-normal leading-none">Bernis Nukic</div>
 
-                            <div className="inline-flex space-x-4 pb-4">
-                                <a href="https://github.com/bernisnukic" className="flex items-center space-x-1 text-gray-600">
-                                    <div>Github</div>
-                                    <svg className="h-4 w-4 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                                    </svg>
-                                </a>
-                                <a href="mailto:bernis@bernisnukic.com" className="flex items-center space-x-1 text-gray-600">
-                                    <div>Email</div>
-                                    <svg className="h-4 w-4 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1}
-                                              d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
+                        {!menuOpen ? (
+                            <svg onClick={() => setMenuOpen(true)} className="sm:hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16"/>
+                            </svg>
+                        ) : (
+                            <svg onClick={() => setMenuOpen(false)} className="sm:hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        )}
+
+                    </div>
+
+                    <div className="hidden sm:block flex w-full">
+
+                        <Header/>
+
+                    </div>
+
+                    <div className="sm:hidden flex w-full">
+
+                        {menuOpen && <Header/>}
+
                     </div>
                     <div className="prose prose-2xl mt-10">
                         <p>Hey, I'm Bernis. I'm a full stack developer.</p>
