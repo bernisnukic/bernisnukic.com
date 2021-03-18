@@ -6,10 +6,10 @@ class HeaderComponent extends Component {
         return (
             <div className="mt-10 w-full flex flex-col sm:flex-row justify-between text-lg mt-10 text-gray-700 sm:border-b border-gray-400 space-y-5 sm:space-y-0">
                 <div className="flex flex-col sm:inline-flex sm:flex-row sm:space-x-4 -mb-px space-y-5 sm:space-y-0 sm:pb-0">
-                    <Link href="/" activeClassName="text-gray-600 sm:border-b border-gray-900">
+                    <Link href="/" activeClassName="text-gray-600 sm:border-b border-gray-900 sm:pb-3">
                         <a>About</a>
                     </Link>
-                    <Link href="/projects" activeClassName="text-gray-600 sm:border-b border-gray-900">
+                    <Link href="/projects" activeClassName="text-gray-600 sm:border-b border-gray-900 sm:pb-3">
                         <a>Projects</a>
                     </Link>
                 </div>
