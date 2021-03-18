@@ -30,6 +30,7 @@ class HeaderComponent extends Component {
                         </svg>
                     </a>
                 </div>
+
             </div>
         )
     }
