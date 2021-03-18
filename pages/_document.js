@@ -11,6 +11,7 @@ class MyDocument extends Document {
     return (
       <Html className="">
           <Head>
+              <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
           </Head>
         <body className="">
           <Main />
