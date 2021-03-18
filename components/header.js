@@ -4,18 +4,18 @@ import Link from "./Link";
 class HeaderComponent extends Component {
     render() {
         return (
-            <div className="mt-10 w-full flex flex-col sm:flex-row justify-between text-lg mt-10 text-gray-700 sm:border-b border-gray-400">
-                <div className="flex flex-col sm:inline-flex sm:flex-row sm:space-x-4 -mb-px pb-6 sm:pb-0">
-                    <Link href="/" activeClassName="text-gray-600 pb-6 sm:border-b border-gray-900">
+            <div className="mt-10 w-full flex flex-col sm:flex-row justify-between text-lg mt-10 text-gray-700 sm:border-b border-gray-400 space-y-5 sm:space-y-0">
+                <div className="flex flex-col sm:inline-flex sm:flex-row sm:space-x-4 -mb-px space-y-5 sm:space-y-0 sm:pb-0">
+                    <Link href="/" activeClassName="text-gray-600 sm:border-b border-gray-900">
                         <a>About</a>
                     </Link>
-                    <Link href="/projects" activeClassName="text-gray-600 pb-6 sm:border-b border-gray-900">
+                    <Link href="/projects" activeClassName="text-gray-600 sm:border-b border-gray-900">
                         <a>Projects</a>
                     </Link>
                 </div>
 
-                <div className="flex flex-col sm:inline-flex sm:flex-row sm:space-x-4 -mb-px pb-6 sm:pb-0">
-                    <a href="https://github.com/bernisnukic" className="flex items-center space-x-1 text-gray-600 pb-6 sm:pb-0">
+                <div className="flex flex-col sm:inline-flex sm:flex-row sm:space-x-4 -mb-px space-y-5 sm:space-y-0 sm:pb-0">
+                    <a href="https://github.com/bernisnukic" className="flex items-center space-x-1 text-gray-600 sm:pb-0">
                         <div>Github</div>
                         <svg className="h-4 w-4 text-gray-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="20">
                             <path fill="rgb(149, 157, 165)"
