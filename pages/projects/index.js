@@ -43,9 +43,9 @@ export default function Home() {
                     <div className="mt-10 w-full">
                         <div className="bg-white">
                             <div className="flex flex-col sm:flex-row justify-between">
-                                {/*<div className="">*/}
-                                {/*    <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-900 font-medium leading-none tracking-wide">Projects</h2>*/}
-                                {/*</div>*/}
+                                <div className="sm:hidden">
+                                    <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-900 font-medium leading-none tracking-wide">Projects</h2>
+                                </div>
                                 <div className="mt-12 lg:mt-0 lg:col-span-2">
                                     <dl className="space-y-5">
                                         <div className="relative prose">
