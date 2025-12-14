@@ -1,48 +1,23 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-    future: {
-        removeDeprecatedGapUtilities: true,
-        purgeLayersByDefault: true,
-        defaultLineHeights: true,
-        standardFontWeights: true
-    },
-    darkMode: 'class',
-    purge: {
-        enabled: true,
-        content: [
-            './*.html',
-            './components/**/*.js',
-            './pages/**/*.js',
-        ]
-    },
-    theme: {
-        extend: {
-            fontFamily: {
-                inter: ['Inter', ...defaultTheme.fontFamily.sans],
+  content: [
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './lib/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            a: {
+              textDecoration: 'underline',
+              textUnderlineOffset: '3px',
             },
-            fontSize: {
-                'xss': '.65rem',
-            },
-            margin: {
-                '9.5': '2.4rem',
-            },
-            typography: {
-                DEFAULT: {
-                    css: {
-                        a: {
-                            color: '#fff',
-                            '&:hover': {
-                                color: '#fff',
-                            },
-                        },
-                    },
-                },
-            },
+          },
         },
+      },
     },
-    variants: {},
-    plugins: [
-        require('@tailwindcss/typography'),
-    ]
+  },
 }
