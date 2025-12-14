@@ -1,6 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+.prose pre {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(9, 10, 15, 0.8);
+}
+
+.prose pre code {
+  background: transparent;
+}
+
+.prose :not(pre) > code {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(24, 24, 27, 0.6);
+  padding: 0.12em 0.35em;
+  border-radius: 0.35em;
+}
 
 .blur {
     background-color: rgba(255, 255, 255, .35);
