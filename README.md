@@ -1,30 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# bernisnukic.com
 
-## Getting Started
+Personal website built with Next.js (App Router) and deployed to Cloudflare Workers via OpenNext.
 
-First, run the development server:
+## Requirements
+
+- Node.js `>=20.9.0` (required by `next`)
+- A Cloudflare account (for deploy/preview on Workers)
+
+## Setup
+
+```bash
+npm install
+```
+
+## Development
+
+Run the Next.js dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Routes live under `app/` (e.g. `app/page.jsx`).
 
-## Learn More
+## Cloudflare (OpenNext)
 
-To learn more about Next.js, take a look at the following resources:
+Preview locally using the Cloudflare Workers runtime:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run preview
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Deploy to Cloudflare Workers:
 
-## Deploy on Vercel
+```bash
+npm run deploy
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Wrangler entry points are defined in `wrangler.toml` and OpenNext output is generated into `.open-next/`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Type generation (optional)
+
+Generate a `cloudflare-env.d.ts` based on your Wrangler configuration:
+
+```bash
+npm run cf-typegen
+```
