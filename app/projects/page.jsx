@@ -19,6 +19,11 @@ const projects = [
   {
     title: 'Online Video Editor',
     href: 'https://editclips.online/',
+    // rel="me" closes the bidirectional identity link with editclips.online/about
+    // (Person schema sameAs there points back here). Google's Knowledge Graph
+    // and IndieWeb verifiers treat reciprocal rel="me" as a verified identity
+    // rather than a one-way claim.
+    rel: 'me',
     description:
       'A website where you can edit video clips in your browser without uploading any files. Works completely offline.',
   },
@@ -32,7 +37,7 @@ export default function Page() {
           {projects.map((project) => (
             <div key={project.href} className="relative prose prose-invert">
               <dt>
-                <a href={project.href} className="flex items-center space-x-1 text-lg leading-6 font-medium text-white hover:underline">
+                <a href={project.href} rel={project.rel} className="flex items-center space-x-1 text-lg leading-6 font-medium text-white hover:underline">
                   <div>{project.title}</div>
                   <svg className="h-4 w-4 text-zinc-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
