@@ -32,7 +32,10 @@ export function GET(request) {
         <div
           style={{
             position: 'absolute',
-            inset: 0,
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0,
             background:
               'linear-gradient(135deg, rgba(17, 24, 39, 1) 0%, rgba(3, 7, 18, 1) 45%, rgba(17, 24, 39, 1) 100%)',
           }}
@@ -40,7 +43,10 @@ export function GET(request) {
         <div
           style={{
             position: 'absolute',
-            inset: 0,
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0,
             background:
               'linear-gradient(45deg, rgba(136, 19, 55, 0.35) 0%, rgba(0, 0, 0, 0) 35%, rgba(49, 46, 129, 0.35) 100%)',
           }}
@@ -48,7 +54,10 @@ export function GET(request) {
         <div
           style={{
             position: 'absolute',
-            inset: 0,
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0,
             background:
               'linear-gradient(315deg, rgba(136, 19, 55, 0.18) 0%, rgba(0, 0, 0, 0) 50%, rgba(136, 19, 55, 0.12) 100%)',
           }}
