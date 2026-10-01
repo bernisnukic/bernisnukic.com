@@ -1,7 +1,6 @@
 import { ImageResponse } from 'next/og'
 
-// No `runtime = 'edge'`: OpenNext on Cloudflare Workers doesn't support the edge runtime,
-// and every share image failed with a 500 while it was set.
+export const runtime = 'edge'
 
 export function GET(request) {
   const { searchParams } = new URL(request.url)
