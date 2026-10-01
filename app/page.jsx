@@ -67,7 +67,7 @@ export default function Page() {
           </Link>
         </div>
         <img
-          src="/profile.jpg"
+          src="/profile.jpg?v=2026-10"
           alt="Bernis Nukic"
           width={460}
           height={460}
