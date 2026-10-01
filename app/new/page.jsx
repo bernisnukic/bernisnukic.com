@@ -1,15 +1,6 @@
-import SiteLayout from '../../components/SiteLayout'
+import { permanentRedirect } from 'next/navigation'
 
-export const metadata = {
-  title: 'New',
-}
-
+// /new was a placeholder; the page it was reserved for is /now.
 export default function Page() {
-  return (
-    <SiteLayout>
-      <div className="prose prose-2xl prose-invert">
-        <p>This page is reserved for future updates.</p>
-      </div>
-    </SiteLayout>
-  )
+  permanentRedirect('/now')
 }

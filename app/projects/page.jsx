@@ -1,54 +1,72 @@
+import PageHeader from '../../components/PageHeader'
+import ProjectCard from '../../components/ProjectCard'
+import SectionHeading from '../../components/SectionHeading'
 import SiteLayout from '../../components/SiteLayout'
+import { getAllProjects } from '../../lib/projects'
 
 export const metadata = {
   title: 'Projects',
+  description: 'Products I run, apps and tools I build, and open source work.',
 }
 
-const projects = [
+const contributions = [
   {
-    title: 'FadeHost',
-    href: 'https://fadehost.com/',
-    description:
-      'FadeHost specializes in hosting and automation services in the gaming industry. We are currently hosting websites, VPS and game servers.',
-  },
-  {
-    title: 'Minecraft Tools',
-    href: 'https://tools.fadehost.com/',
-    description: 'A collection of useful tools relating to managing a Minecraft server.',
-  },
-  {
-    title: 'Online Video Editor',
-    href: 'https://editclips.online/',
-    // rel="me" closes the bidirectional identity link with editclips.online/about
-    // (Person schema sameAs there points back here). Google's Knowledge Graph
-    // and IndieWeb verifiers treat reciprocal rel="me" as a verified identity
-    // rather than a one-way claim.
-    rel: 'me',
-    description:
-      'A website where you can edit video clips in your browser without uploading any files. Works completely offline.',
+    title: 'Domain Connect templates for FadeHost',
+    repo: 'Domain-Connect/Templates',
+    href: 'https://github.com/Domain-Connect/Templates/pull/1808',
+    date: 'Sep 2026',
+    text: "Added FadeHost's templates for Minecraft servers (SRV records) and community websites (CNAME records) to the Domain Connect protocol.",
   },
 ]
 
 export default function Page() {
+  const projects = getAllProjects()
+  const products = projects.filter((project) => project.kind === 'product')
+  const apps = projects.filter((project) => project.kind === 'app')
+
   return (
     <SiteLayout>
-      <div>
-        <dl className="space-y-5">
-          {projects.map((project) => (
-            <div key={project.href} className="relative prose prose-invert">
-              <dt>
-                <a href={project.href} rel={project.rel} className="flex items-center space-x-1 text-lg leading-6 font-medium text-white hover:underline">
-                  <div>{project.title}</div>
-                  <svg className="h-4 w-4 text-zinc-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-              </dt>
-              <dd className="mt-2 text-base text-zinc-300 border-b border-white/10 pb-5">{project.description}</dd>
-            </div>
+      <PageHeader eyebrow="Projects" title="Things I've built">
+        <p>Products I run, apps and tools I&apos;ve made for myself and others, and the odd open source contribution.</p>
+      </PageHeader>
+
+      <section className="mt-14">
+        <SectionHeading index="01" title="Products" />
+        <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {products.map((project) => (
+            <ProjectCard key={project.slug} project={project} eager />
           ))}
-        </dl>
-      </div>
+        </div>
+      </section>
+
+      <section className="mt-16">
+        <SectionHeading index="02" title="Apps & tools" />
+        <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {apps.map((project) => (
+            <ProjectCard key={project.slug} project={project} />
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-16">
+        <SectionHeading index="03" title="Open source contributions" />
+        <ul className="mt-2 divide-y divide-white/10">
+          {contributions.map((item) => (
+            <li key={item.href}>
+              <a href={item.href} className="group flex flex-col gap-1 py-5 sm:flex-row sm:items-baseline sm:gap-6">
+                <span className="w-24 shrink-0 font-mono text-xs uppercase tracking-wider text-zinc-500">{item.date}</span>
+                <span>
+                  <span className="font-medium text-white decoration-white/30 underline-offset-4 group-hover:underline">
+                    {item.title}
+                  </span>
+                  <span className="ml-2 font-mono text-xs text-zinc-500">{item.repo}</span>
+                  <span className="mt-1 block text-sm leading-6 text-zinc-400">{item.text}</span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
     </SiteLayout>
   )
 }

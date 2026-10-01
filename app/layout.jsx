@@ -1,8 +1,12 @@
 import '../styles/globals.css'
 
-import { Inter } from 'next/font/google'
+import { Geist_Mono, Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' })
+const mono = Geist_Mono({ subsets: ['latin'], display: 'swap', variable: '--font-geist-mono' })
+
+const description =
+  'Full stack developer and founder of FadeHost. Building EditClips, Camera Import and other tools for the web, the desktop and the terminal.'
 
 export const metadata = {
   metadataBase: new URL('https://bernis.dev'),
@@ -10,10 +14,10 @@ export const metadata = {
     default: 'Bernis Nukic',
     template: '%s · Bernis Nukic',
   },
-  description: "Bernis Nukic's personal website.",
+  description,
   openGraph: {
     title: 'Bernis Nukic',
-    description: "Bernis Nukic's personal website.",
+    description,
     url: '/',
     siteName: 'Bernis Nukic',
     type: 'website',
@@ -29,7 +33,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Bernis Nukic',
-    description: "Bernis Nukic's personal website.",
+    description,
     images: ['/api/og?title=Bernis%20Nukic&description=Full%20stack%20developer&tag=bernis.dev'],
   },
   icons: {
@@ -39,7 +43,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.className} dark`}>
+    <html lang="en" className={`${inter.className} ${mono.variable} dark`}>
       <body className="bg-gray-950 text-gray-100 antialiased">{children}</body>
     </html>
   )
