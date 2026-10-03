@@ -84,7 +84,7 @@ export default async function Page({ params }) {
   })
 
   const fallbackHeroImage = `/api/og?${heroParams.toString()}`
-  const heroImage = showSrOnlyDemo ? '/blog/tailwind-sr-only-hero.png' : fallbackHeroImage
+  const heroImage = showSrOnlyDemo ? '/blog/tailwind-sr-only-hero.png' : post.hero || fallbackHeroImage
 
   const demoHeading = '<h2>Demo</h2>'
   let beforeDemoHtml = post.contentHtml

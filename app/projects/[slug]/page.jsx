@@ -100,7 +100,12 @@ export default async function Page({ params }) {
             >
               {link.label}
               <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M7 17 17 7M9 7h8v8" />
+                {/* an arrow pointing out for other sites, straight ahead for pages on this one */}
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d={link.href.startsWith('/') ? 'M5 12h14m-6-6 6 6-6 6' : 'M7 17 17 7M9 7h8v8'}
+                />
               </svg>
             </a>
           ))}

@@ -33,12 +33,12 @@ const items = [
   },
   {
     label: 'macOS',
-    title: 'Shipping Camera Import',
+    title: 'Shipping Shutterback',
     body: (
       <>
         The new camera needed a painless way to get footage onto my Mac, so I built{' '}
-        <Link href="/projects/camera-import">Camera Import</Link>, a menu bar app that copies new files and then lets go
-        of the camera.
+        <Link href="/projects/shutterback">Shutterback</Link>, a menu bar app that copies new files and then gives the
+        camera back. Getting a Canon to let go took <Link href="/blog/canon-stuck-usb-screen-mac">some digging</Link>.
       </>
     ),
   },

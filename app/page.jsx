@@ -59,7 +59,7 @@ export default function Page() {
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
             </span>
             <span>
-              <span className="text-zinc-500">Now:</span> filming videos for EditClips and shipping Camera Import
+              <span className="text-zinc-500">Now:</span> filming videos for EditClips and shipping Shutterback
             </span>
             <span aria-hidden="true" className="transition group-hover:translate-x-0.5">
               →

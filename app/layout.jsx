@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'], display: 'swap' })
 const mono = Geist_Mono({ subsets: ['latin'], display: 'swap', variable: '--font-geist-mono' })
 
 const description =
-  'Full stack developer and founder of FadeHost. Building EditClips, Camera Import and other tools for the web, the desktop and the terminal.'
+  'Full stack developer and founder of FadeHost. Building EditClips, Shutterback and other tools for the web, the desktop and the terminal.'
 
 export const metadata = {
   metadataBase: new URL('https://bernis.dev'),
