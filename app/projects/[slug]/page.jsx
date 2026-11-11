@@ -7,6 +7,7 @@ import SectionHeading from '../../../components/SectionHeading'
 import SiteLayout from '../../../components/SiteLayout'
 import StatusBadge from '../../../components/StatusBadge'
 import { getAllProjects, getProjectBySlug } from '../../../lib/projects'
+import { alternates } from '../../../lib/site'
 
 export const dynamicParams = false
 
@@ -32,7 +33,7 @@ export async function generateMetadata({ params }) {
   return {
     title: project.title,
     description: project.tagline,
-    alternates: { canonical: url },
+    alternates: alternates(url),
     openGraph: {
       title: project.title,
       description: project.tagline,

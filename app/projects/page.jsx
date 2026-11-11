@@ -3,10 +3,12 @@ import ProjectCard from '../../components/ProjectCard'
 import SectionHeading from '../../components/SectionHeading'
 import SiteLayout from '../../components/SiteLayout'
 import { getAllProjects } from '../../lib/projects'
+import { alternates } from '../../lib/site'
 
 export const metadata = {
   title: 'Projects',
   description: 'Products I run, apps and tools I build, and open source work.',
+  alternates: alternates('/projects'),
 }
 
 const contributions = [

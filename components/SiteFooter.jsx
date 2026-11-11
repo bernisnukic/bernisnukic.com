@@ -9,6 +9,9 @@ export default function SiteFooter() {
           <Link href="/now" className="hover:text-white">
             Now
           </Link>
+          <a href="/rss.xml" className="hover:text-white">
+            RSS
+          </a>
           <a href="https://github.com/bernisnukic" className="hover:text-white">
             GitHub
           </a>

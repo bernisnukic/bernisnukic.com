@@ -4,6 +4,7 @@ import SiteLayout from '../../../components/SiteLayout'
 import PostHero from '../../../components/blog/PostHero'
 import SrOnlyScrollWidthDemo from '../../../components/blog/SrOnlyScrollWidthDemo'
 import { getAllPosts, getPostBySlug } from '../../../lib/blog'
+import { alternates } from '../../../lib/site'
 
 const legacySlug = '2025-12-13-sr-only-scrollwidth'
 const canonicalSlug = 'tailwind-sr-only-horizontal-scrollbar'
@@ -36,9 +37,7 @@ export async function generateMetadata({ params }) {
   return {
     title: post.title,
     description: post.description || undefined,
-    alternates: {
-      canonical: url,
-    },
+    alternates: alternates(url),
     openGraph: {
       title: post.title,
       description: post.description || undefined,

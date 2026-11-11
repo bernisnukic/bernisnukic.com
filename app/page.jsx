@@ -6,10 +6,12 @@ import SiteLayout from '../components/SiteLayout'
 import Timeline from '../components/Timeline'
 import { getAllPosts } from '../lib/blog'
 import { getAllProjects } from '../lib/projects'
+import { alternates } from '../lib/site'
 import { timeline } from '../lib/timeline'
 
+// No title here: the home page takes the site name from the layout's default.
 export const metadata = {
-  title: 'About',
+  alternates: alternates('/'),
 }
 
 export default function Page() {

@@ -2,10 +2,12 @@ import Link from 'next/link'
 
 import PageHeader from '../../components/PageHeader'
 import SiteLayout from '../../components/SiteLayout'
+import { alternates } from '../../lib/site'
 
 export const metadata = {
   title: 'Now',
   description: "What I'm focused on right now.",
+  alternates: alternates('/now'),
 }
 
 const updated = { iso: '2026-10-01', label: '1 October 2026' }

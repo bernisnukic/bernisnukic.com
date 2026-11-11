@@ -2,9 +2,11 @@ import Link from 'next/link'
 
 import SiteLayout from '../../components/SiteLayout'
 import { getAllPosts } from '../../lib/blog'
+import { alternates } from '../../lib/site'
 
 export const metadata = {
   title: 'Blog',
+  alternates: alternates('/blog'),
 }
 
 export default function Page() {
