@@ -26,6 +26,13 @@ const contributions = [
     date: 'Jan 2022',
     text: 'Found and reported a bug where an empty POST request to any endpoint crashed the WebSocket server, with no authentication needed. Fixed in 0.24.1.',
   },
+  {
+    title: 'Crash report for SFTPGo',
+    repo: 'drakkan/sftpgo',
+    href: 'https://github.com/drakkan/sftpgo/issues/4',
+    date: 'Jul 2019',
+    text: "Reported that an upload past a user's file quota crashed the server. The maintainer fixed it the same day.",
+  },
 ]
 
 export default function Page() {
