@@ -2,6 +2,7 @@
 title: 'Headroom: a system monitor in Rust and gpui that costs about 1% CPU'
 date: '2026-11-11'
 description: "I wanted RAM, CPU and GPU in one window that was cheap enough to leave open. I couldn't find it, so I built it with gpui, and most of the work was not drawing."
+hero: /blog/headroom-hero.webp
 ---
 
 I wanted one window that shows where my RAM, CPU and GPU are going, and I wanted it open all day. That second part was the problem. I looked for a tool that showed all three together and stayed out of the way, and I didn't find one I was happy to leave running. My bar was simple: under 1% CPU, or it's part of the problem it is supposed to show me.
@@ -64,7 +65,9 @@ Two things are worse there. macOS has no public way to read temperatures, per-ap
 
 ## Screenshots without my machine in them
 
-A monitor's screenshots show everything you have running. So there is a demo mode, `headroom --demo`, that fills every tab with a simulated machine and reads nothing from the real one. Every picture of Headroom on this site and on GitHub comes from it.
+A monitor's screenshots show everything you have running. So there is a demo mode, `headroom --demo`, that fills every tab with a simulated machine and reads nothing from the real one. Every picture of Headroom on this site and on GitHub comes from it, including the Memory and CPU tabs at the top of this post and the GPU tab and Settings below.
+
+![Headroom's GPU tab and its Settings view, with Start at login and the choice of top bar values, in demo mode](/projects/headroom-gpu-settings.webp)
 
 ## Get it
 
