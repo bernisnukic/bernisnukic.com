@@ -25,7 +25,7 @@ export function GET() {
 
   const items = posts
     .map((post) => {
-      const url = `${siteUrl}/blog/${post.slug}`
+      const url = escapeXml(`${siteUrl}/blog/${encodeURIComponent(post.slug)}`)
       const pubDate = post.date ? toRssDate(post.date) : ''
 
       return [
