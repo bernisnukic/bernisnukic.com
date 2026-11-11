@@ -19,6 +19,13 @@ const contributions = [
     date: 'Sep 2026',
     text: "Added FadeHost's templates for Minecraft servers (SRV records) and community websites (CNAME records) to the Domain Connect protocol.",
   },
+  {
+    title: 'CVE-2022-21667 in soketi',
+    repo: 'soketi/soketi',
+    href: 'https://github.com/advisories/GHSA-86ch-6w7v-v6xf',
+    date: 'Jan 2022',
+    text: 'Found and reported a bug where an empty POST request to any endpoint crashed the WebSocket server, with no authentication needed. Fixed in 0.24.1.',
+  },
 ]
 
 export default function Page() {
