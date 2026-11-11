@@ -4,6 +4,7 @@ tagline: Minecraft server hosting with a RAM pool you split across unlimited ser
 kind: product
 platform: Web
 status: Since 2011
+visitors: About 100k a month (Oct 2026)
 order: 2
 featured: true
 accent: '#38bdf8'

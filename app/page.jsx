@@ -50,8 +50,8 @@ export default function Page() {
                 className="text-white underline decoration-white/30 underline-offset-4 hover:decoration-white"
               >
                 EditClips
-              </a>{' '}
-              and a growing set of apps and tools.
+              </a>
+              , which gets about 100k visitors a month, and a growing set of apps and tools.
             </p>
           </div>
           <Link

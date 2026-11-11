@@ -62,6 +62,7 @@ export default async function Page({ params }) {
   const facts = [
     ['Platform', project.platform],
     ['Year', project.year],
+    ['Visitors', project.visitors],
     ['Built with', project.stack.join(', ')],
   ].filter(([, value]) => value)
 
