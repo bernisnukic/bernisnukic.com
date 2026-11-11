@@ -1,10 +1,12 @@
 import Link from 'next/link'
 
+import PodcastCard from '../components/PodcastCard'
 import ProjectCard from '../components/ProjectCard'
 import SectionHeading from '../components/SectionHeading'
 import SiteLayout from '../components/SiteLayout'
 import Timeline from '../components/Timeline'
 import { getAllPosts } from '../lib/blog'
+import { podcasts } from '../lib/podcasts'
 import { getAllProjects } from '../lib/projects'
 import { alternates } from '../lib/site'
 import { timeline } from '../lib/timeline'
@@ -118,6 +120,15 @@ export default function Page() {
           </ul>
         </section>
       </div>
+
+      <section className="mt-20">
+        <SectionHeading index="04" title="Podcasts" />
+        <div className="mt-6 grid gap-5 md:grid-cols-2">
+          {podcasts.map((podcast) => (
+            <PodcastCard key={podcast.watch} podcast={podcast} />
+          ))}
+        </div>
+      </section>
     </SiteLayout>
   )
 }
