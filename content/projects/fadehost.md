@@ -15,6 +15,8 @@ links:
     href: https://fadehost.com/
   - label: Free Minecraft tools
     href: https://tools.fadehost.com/
+  - label: YouTube
+    href: https://www.youtube.com/@fadehost
 ---
 
 I founded FadeHost, a hosting company for the gaming industry, and I still build most of what runs it.
