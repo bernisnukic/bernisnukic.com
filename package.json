@@ -14,14 +14,14 @@
     "@opennextjs/cloudflare": "^1.8.3",
     "gray-matter": "^4.0.3",
     "next": "^16.0.10",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
     "rehype-pretty-code": "^0.14.1",
     "rehype-stringify": "^10.0.1",
     "remark": "^15.0.1",
     "remark-gfm": "^4.0.1",
-    "remark-rehype": "^11.1.2",
     "remark-html": "^16.0.1",
+    "remark-rehype": "^11.1.2",
     "shiki": "^3.0.0"
   },
   "devDependencies": {
@@ -31,5 +31,9 @@
     "postcss": "^8.4.49",
     "tailwindcss": "^4.1.17",
     "wrangler": "^4.36.0"
+  },
+  "overrides": {
+    "glob": "^14.0.6",
+    "postcss-selector-parser": "^6.1.5"
   }
 }
