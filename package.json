@@ -35,5 +35,8 @@
   "overrides": {
     "glob": "^14.0.6",
     "postcss-selector-parser": "^6.1.5"
+  },
+  "allowScripts": {
+    "workerd@1.20261119.1": true
   }
 }
